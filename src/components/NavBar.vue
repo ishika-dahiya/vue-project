@@ -1,28 +1,15 @@
 <template>
-  <div class="navbar">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
+  <div class="navbar bg-gray-900 p-4 flex items-center justify-center">
+    <router-link to="/" class="text-white mx-2">Home</router-link>
+    <router-link to="/about" class="text-white mx-4">About</router-link>
+    <router-link to="/contact" class="text-white mx-4">Contact</router-link>
+    <router-link to="/submit" class="text-white mx-4">Submissions</router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NavBar'
-}
+  name: "NavBar",
+};
 </script>
 
-<style>
-.navbar {
-  background-color: #333;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin: 0px 50px ;
-}
-</style>

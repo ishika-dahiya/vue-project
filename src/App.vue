@@ -1,6 +1,6 @@
 <template>
   <!-- Root element of the Vue application -->
-  <div id="vue-app">
+  <div id="vue-app" class="font-sans mt-14">
     <!-- HelloWorld component -->
     <!-- Display a welcome message using text interpolation -->
     <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -12,6 +12,7 @@
     <!-- Router view -->
     <!-- Display the component corresponding to the current route -->
     <router-view></router-view>
+
   </div>
 </template>
 
@@ -29,22 +30,3 @@ export default {
   },
 };
 </script>
-
-<style>
-
-#vue-app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  margin-top: 60px;
-}
-
-.navbar {
-  background-color: #333;
-  padding: 10px;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  margin-right: 10px;
-}
-</style>

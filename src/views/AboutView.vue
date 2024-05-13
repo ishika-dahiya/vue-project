@@ -1,24 +1,40 @@
 <template>
-  <div class="about-view">
-    <div class="introduction-box">
-      <h2>About JavaScript Frameworks</h2>
-      <p>
-        JavaScript frameworks are essential tools for building modern web
-        applications. They provide developers with the necessary tools and
-        structure to create scalable and maintainable codebases.
+  <div class="about-view p-4 bg-gray-300">
+    <div
+      class="introduction-box p-4 bg-gray-100 border rounded-lg mx-auto max-w-2xl"
+    >
+      <h2 class="text-xl font-semibold">About UI Frameworks</h2>
+      <p class="mt-2">
+        UI frameworks are important tools in web development. They offer
+        ready-made components and styling options, making it easier for
+        developers to create attractive and consistent user interfaces. These
+        frameworks simplify the process of building the visual aspects of
+        websites and applications, resulting in better-looking designs and
+        smoother development workflows.
       </p>
     </div>
 
-    <div class="frameworks-box">
-      <h3>Popular JavaScript Frameworks:</h3>
+    <div
+      class="frameworks-box flex flex-col flex-wrap justify-center mt-8 mx-auto max-w-lg"
+    >
+      <h3 class="font-bold text-2xl text-center">Popular UI Frameworks:</h3>
       <div
-        class="framework"
+        class="framework p-4"
         v-for="(framework, index) in frameworks"
         :key="index"
       >
-        <h4>{{ framework.name }}</h4>
-        <p>{{ framework.description }}</p>
-        <a :href="framework.website" target="_blank">{{ framework.website }}</a>
+        <h4 class="text-lg font-bold text-center">
+          {{ framework.name }}
+        </h4>
+        <div class="bg-white m-2 p-2 rounded-lg text-center">
+          <p class="font-medium">{{ framework.description }}</p>
+          <a
+            :href="framework.website"
+            target="_blank"
+            class="text-blue-400 text-lg font-bold"
+            >{{ framework.website }}</a
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -26,62 +42,36 @@
 
 <script>
 export default {
-  // Component name
   name: "AboutView",
-
-  // Data properties
   data() {
     return {
-      // Array of JavaScript frameworks
+      // Array of UI frameworks
       frameworks: [
         {
-          name: "Vue.js",
+          name: "Tailwind CSS",
           description:
-            "Vue.js is a progressive JavaScript framework for building user interfaces.",
-          website: "https://vuejs.org/",
+            "Tailwind CSS is a utility-first CSS framework for building custom designs without having to leave your HTML.",
+          website: "https://tailwindcss.com/",
         },
         {
-          name: "React",
+          name: "Vuetify",
           description:
-            "React is a JavaScript library for building user interfaces, developed by Facebook.",
-          website: "https://reactjs.org/",
+            "Vuetify is a Material Design component framework for Vue.js.",
+          website: "https://vuetifyjs.com/",
         },
         {
-          name: "Angular",
+          name: "Element UI",
+          description: "Element UI is a Vue.js 2.0 UI Toolkit for Web.",
+          website: "https://element.eleme.io/",
+        },
+        {
+          name: "BootstrapVue",
           description:
-            "Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google.",
-          website: "https://angular.io/",
+            "BootstrapVue provides one of the most comprehensive implementations of Bootstrap v4 components and grid system for Vue.js.",
+          website: "https://bootstrap-vue.org/",
         },
       ],
     };
   },
 };
 </script>
-
-<style scoped>
-.about-view {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.introduction-box {
-  margin: 10px;
-  padding: 20px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.frameworks-box {
-  margin-top: 20px;
-}
-
-.framework {
-  margin-bottom: 20px;
-}
-
-.framework a {
-  color: blue;
-  text-decoration: underline;
-}
-</style>

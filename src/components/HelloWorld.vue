@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="hello p-4 bg-white rounded shadow-md">
     <!--  text interpolation using the “Mustache” syntax to display value of 'msg' prop-->
-    <h1>{{ msg }}</h1>
+    <h1 class="text-2xl font-bold text-center">{{ msg }}</h1>
   </div>
 </template>
 
